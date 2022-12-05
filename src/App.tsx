@@ -1,10 +1,9 @@
+import PageContainer from "./components/PageContainer";
+
 function App() {
   return (
     <div>
-      <div className='underline'>
-        HELLO WORLD
-      </div>
-      <div>This has no class name</div>
+      <PageContainer />
     </div>
   );
 }
