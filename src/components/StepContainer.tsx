@@ -5,21 +5,22 @@ type Props = {}
 
 const STEPS = [
     'untap',
-    'upkeetp',
+    'upkeep',
     'draw',
-    'main phase',
-    'beginning of combat',
+    'main',
+    'start combat',
     'declare attackers',
-    'combat damage',
-    'end of combat',
-    'main phase',
+    'declare blockers',
+    'damage',
+    'end combat',
+    'main',
     'end',
     'clean up'
 ]
 
 function StepContainer({ }: Props) {
     return (
-        <div className='flex justify-between mb-6 mx-auto p-6'>
+        <div className='flex flex-row justify-between overflow-auto'>
             {STEPS.map((step, index) => {
                 return <Step key={index} step={step} />
             })}

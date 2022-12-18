@@ -4,7 +4,7 @@ type Props = { step: any }
 
 function Step({ step }: Props) {
     return (
-        <div className='mr-2 border p-2'>{step}</div>
+        <div className='font-bold border p-2 flex items-center'>{step.toUpperCase()}</div>
     )
 }
 

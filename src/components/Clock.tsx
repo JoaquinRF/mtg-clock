@@ -8,7 +8,7 @@ type Props = {
 function Clock({ time, onClick }: Props) {
     return (
         <div
-            className='text-[200px]  font-extrabold flex justify-center'
+            className='text-[5em]  font-extrabold flex justify-center'
             onClick={onClick}
         >
             <span>

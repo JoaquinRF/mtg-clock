@@ -1,10 +1,11 @@
 import React from 'react'
+import { HEADER_BUTTON_WIDTH } from './PageContainer'
 
 type Props = { playerName: string | null }
 
 function TurnIndicator({ playerName }: Props) {
     return (
-        <div className='border w-fit p-4 ml-4 mt-4'>{playerName ? `Current turn: ${playerName}` : 'Start Game'}</div>
+        <div className='header-button'>{playerName ? `Current turn: ${playerName}` : 'Start Game'}</div>
     )
 }
 

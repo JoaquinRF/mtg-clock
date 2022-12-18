@@ -4,7 +4,7 @@ type Props = { currentPlayer: string | null; }
 
 function PriorityIndicator({ currentPlayer }: Props) {
     return (
-        <div className='border w-fit p-4 ml-4 mt-4'>
+        <div className='header-button'>
             {currentPlayer ? `Player: ${currentPlayer} has priority` : 'Tap to start game!'}
         </div>
     )

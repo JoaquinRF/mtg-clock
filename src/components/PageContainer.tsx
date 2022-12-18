@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useMasterClock } from '../hooks/useMasterClock'
 import { passPriority, pauseTime, takePriority } from '../mockServer/server'
 import Clock from './Clock'
@@ -8,7 +8,7 @@ import TurnIndicator from './TurnIndicator'
 
 type Props = { playerInfo: { name: string, playerIndex: number } }
 
-
+export const HEADER_BUTTON_WIDTH = 'min-w-[180px]'
 
 function PageContainer({ playerInfo }: Props) {
     const { time, currentPlayerInfo, currentTurn } = useMasterClock(playerInfo.name)
@@ -18,16 +18,15 @@ function PageContainer({ playerInfo }: Props) {
         else takePriority(playerInfo.playerIndex)
     }
     return (
-        <div className='flex flex-col justify-between h-screen p-6'>
+        <div className='page-container'>
             <div className='flex justify-between'>
 
                 <TurnIndicator playerName={currentTurn} />
                 <PriorityIndicator currentPlayer={currentPlayerInfo.name} />
 
-                <div className='flex items-center'>
-                    <div className='border mr-4 p-2 text-xl h-fit' onClick={() => pauseTime()}>
-                        PAUSE
-                    </div>
+
+                <div className='header-button' onClick={() => pauseTime()}>
+                    Pause
                 </div>
             </div>
 
