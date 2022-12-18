@@ -1,10 +1,12 @@
 import React from 'react'
 
-type Props = {}
+type Props = { currentPlayer: string | null; }
 
-function PriorityIndicator({ }: Props) {
+function PriorityIndicator({ currentPlayer }: Props) {
     return (
-        <div className='border w-fit p-4 ml-4 mt-4'>Red player has priority</div>
+        <div className='border w-fit p-4 ml-4 mt-4'>
+            {currentPlayer ? `Player: ${currentPlayer} has priority` : 'Tap to start game!'}
+        </div>
     )
 }
 

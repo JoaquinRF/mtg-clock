@@ -20,8 +20,8 @@ const STEPS = [
 function StepContainer({ }: Props) {
     return (
         <div className='flex justify-between mb-6 mx-auto p-6'>
-            {STEPS.map(step => {
-                return <Step step={step} />
+            {STEPS.map((step, index) => {
+                return <Step key={index} step={step} />
             })}
         </div>
     )
